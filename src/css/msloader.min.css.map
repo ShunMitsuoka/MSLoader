@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,AAAA,CACL,QAAQ,CAAE,KAAK,CACf,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,gBAAgB,CAAE,KAAK,CACvB,OAAO,CAAE,GAAG,CACf",
+    "sources": [
+        "../scss/msloader.scss"
+    ],
+    "names": [],
+    "file": "msloader.min.css"
+}

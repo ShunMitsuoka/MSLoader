@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>MSBox-js Sample</title>
-<link rel="stylesheet" href="./src/css/msbox.min.css">
+<title>MSLoader-js Sample</title>
+<link rel="stylesheet" href="./src/css/msloader.min.css">
 <style>
     #target{
         width: 800px;
@@ -15,38 +15,23 @@
 </head>
 <body>
     <div>
-        <button type="button" id="open" onclick="modalOpen()">open</button>
-        <button type="button" id="" onclick="modalDestroy()">destroy</button>
+        <button type="button" id="start" onclick="loadingStart()">start</button>
         <div id="target" style="position: relative;">
             適用範囲
         </div>
     </div>
 
-    <div id="modal">
-        モーダル要素<br>
-        <input type="text" name="" id="" value="test"><br>
-        <button>送信</button>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="./src/js/msbox.js"></script>
+    <script src="./src/js/msloader.js"></script>
     <script>
-        let msbox;
+        let msloader;
         // let msbox = new MSBox();
         $(function(){
-            msbox = new MSBox({
-                target: $('#target'),
-                position: 'absolute',
-                // contentHtml: $('#modal').html(),
-                contentHtml: '<span>始めまして、S-MSBox!!</span>',
-                draggable: true,
+            msloader = new MSLoader({
             });
         });
-        function modalOpen(){
-            msbox.open();
-        }
-        function modalDestroy() {
-            msbox.destroy();
+        function loadingStart(){
+            msloader.start();
         }
     </script>
 </body>
