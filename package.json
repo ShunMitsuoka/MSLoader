@@ -1,0 +1,14 @@
+{
+    "name": "msloader",
+    "version": "1.0.0",
+    "main": "src/js/msloader.js",
+    "description": "",
+    "keywords": [
+      "msloader",
+      "loading"
+    ],
+    "author": "ShunMitsuoka",
+    "license": "MIT",
+    "dependencies": {
+    }
+  }
