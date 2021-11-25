@@ -10,15 +10,27 @@ var MSLoader = function(_option){
  * 初期オプション
  */
 const _initOption__msbox = {
+    position: 'fixed', // position
     target: document.querySelector('html body'),
     timeout:null, // ローディングTIMEOUT時間(ms)
     isDetached:false,　// ローディング終了時に要素を取り除くか
-    position: 'fixed', // position
     type: 'type-1', // ローディングタイプ
     zIndex: null, //z-index
     bgColor: '#000000', // 背景色
     bgOpacity: 0.5, // 背景透過度
     content: null, // ローディング内容
+    onStart : function(){
+        // console.log('ローディング開始直前');
+    },
+    onStarted : function(){
+        // console.log('ローディング開始直後');
+    },
+    onStop : function(){
+        // console.log('ローディング停止直前');
+    },
+    onStoped : function(){
+        // console.log('ローディング停止直後');
+    },
 };
 
 /**
@@ -43,7 +55,7 @@ MSLoader.prototype.init = function(_option) {
  * MSLoader表示開始
  * @returns MSLoader
  */
-MSLoader.prototype.start = function(_option) {
+MSLoader.prototype.start = function() {
     const self = this;
     // 既にローディング要素があるかどうか
     if(this.msloader == null || self.option.isDetached){
@@ -82,6 +94,7 @@ MSLoader.prototype.start = function(_option) {
     }else{
 
     }
+    this.option.onStart();
     this.msloader.classList.remove("stop");
     this.msloader.classList.add("start");
     // timeout時間が設定されていた場合、timeout設定
@@ -90,6 +103,7 @@ MSLoader.prototype.start = function(_option) {
             self.stop();
         }, self.option.timeout);
     }
+    this.option.onStarted();
     return this;
 }
 
@@ -97,13 +111,15 @@ MSLoader.prototype.start = function(_option) {
  * MSLoader停止
  * @returns MSLoader
  */
-MSLoader.prototype.stop = function(_option) {
+MSLoader.prototype.stop = function() {
+    this.option.onStop();
     if(this.option.isDetached){
         this.detach();
     }else{
         this.msloader.classList.remove("start");
         this.msloader.classList.add("stop");
     }
+    this.option.onStoped();
     return this;
 }
 
