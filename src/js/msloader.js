@@ -18,7 +18,7 @@ const _initOption__msbox = {
     zIndex: null, //z-index
     bgColor: '#000000', // 背景色
     bgOpacity: 0.5, // 背景透過度
-    content: null,
+    content: null, // ローディング内容
 };
 
 /**
