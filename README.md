@@ -4,7 +4,14 @@ MSLoaderはシンプルなローディング表示用のJavaScriptライブラ�
 
 ## 使用方法
 
+### npmでのダウンロード
+
+```bash
+$ npm i msloader
+```
+
 ### ファイル読み込み
+
 css読み込み
 ```html
 <link rel="stylesheet" href="./src/css/msloader.min.css">
