@@ -18,6 +18,7 @@ const _initOption__msbox = {
     zIndex: null, //z-index
     bgColor: '#000000', // 背景色
     bgOpacity: 0.5, // 背景透過度
+    content: null,
 };
 
 /**
@@ -67,8 +68,12 @@ MSLoader.prototype.start = function(_option) {
         // ローディング本体
         let loaderComponent = document.createElement('div');
         loaderComponent.classList.add("msloader-component");
-        // type設定
-        loaderComponent.classList.add(this.option.type);
+        if(this.option.content == null){
+            // type設定
+            loaderComponent.classList.add(this.option.type);
+        }else{
+            loaderComponent.innerHTML = this.option.content;
+        }
         this.msloader.appendChild(loaderComponent);
 
         this.target.appendChild(loader);
@@ -132,7 +137,7 @@ MSLoader.prototype.detach = function() {
     try {
         let target;
         // jQuery使用可能の場合かつtargetがjQuery要素の場合
-        if(typeof jQuery !== 'undefined' && option.target instanceof jQuery){
+        if(typeof jQuery !== 'undefined' && option.target instanceof jQuery && typeof option.target.get(0) !== "undefined"){
             target = option.target.get(0);
             return target;
         }
