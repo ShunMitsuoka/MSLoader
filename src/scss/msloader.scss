@@ -1,9 +1,33 @@
 .msloader{
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: black;
-    opacity: 0.5;
+    &.start{
+        display: flex;
+    }
+    &.stop{
+        display: none;
+    }
+
+    .msloader-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.5;
+    }
 }
+
+@import './loading/type1';
+@import './loading/type2';
+@import './loading/type3';
+
+
+

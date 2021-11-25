@@ -28,10 +28,25 @@
         // let msbox = new MSBox();
         $(function(){
             msloader = new MSLoader({
+                target: $('#target'),
+                // timeout:5000,
+                // isDetached:true,
+                type:'type-3',
+                bgColor: 'red',
+                bgOpacity: 1,
             });
         });
         function loadingStart(){
             msloader.start();
+            // setTimeout(function () {
+            //     msloader.stop();
+            //     setTimeout(function () {
+            //         msloader.setOption({
+            //             timeout:1000,
+            //         });
+            //         msloader.start();
+            //     }, 2000);
+            // }, 3000);
         }
     </script>
 </body>
