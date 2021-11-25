@@ -73,6 +73,8 @@ MSLoader.prototype.start = function(_option) {
             loaderComponent.classList.add(this.option.type);
         }else{
             loaderComponent.innerHTML = this.option.content;
+            let content = loaderComponent.firstChild;
+            content.style.display = 'block';
         }
         this.msloader.appendChild(loaderComponent);
 
