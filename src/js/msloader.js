@@ -190,3 +190,5 @@ MSLoader.prototype.detach = function() {
  const _showError__msloader = function(msg){
     console.error('msloader : ' + msg);
 }
+
+exports.MSLoader = MSLoader;
