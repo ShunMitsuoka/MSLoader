@@ -22,6 +22,11 @@ JavaScript読み込み
 <script src="./src/js/msloader.js"></script>
 ```
 
+node.jsを使用して読み込み
+```js
+window.MSLoader = require('msloader');
+```
+
 ## 最もシンプルなモーダル表示方法
 
 ```html
