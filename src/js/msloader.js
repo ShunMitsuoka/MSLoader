@@ -38,6 +38,9 @@ const _initOption__msbox = {
  * @returns MSLoader
  */
 MSLoader.prototype.init = function(_option) {
+    if (typeof _option === "undefined") {
+        _option = {};
+      }
     // オプション設定をマージ
     let initOption = Object.assign({}, _initOption__msbox);
     this.option = Object.assign(initOption, _option);

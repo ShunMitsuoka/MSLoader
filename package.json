@@ -1,6 +1,6 @@
 {
     "name": "msloader",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "main": "src/js/msloader.js",
     "description": "",
     "keywords": [
