@@ -27,7 +27,7 @@ node.jsを使用して読み込み
 window.MSLoader = require('msloader');
 ```
 
-## 最もシンプルなモーダル表示方法
+## 最もシンプルなローディング表示方法
 
 ```html
 <script>
