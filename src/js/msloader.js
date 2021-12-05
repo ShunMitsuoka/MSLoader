@@ -194,4 +194,6 @@ MSLoader.prototype.detach = function() {
     console.error('msloader : ' + msg);
 }
 
-module.exports = MSLoader;
+if(typeof module !== 'undefined'){
+    module.exports = MSLoader;
+}
